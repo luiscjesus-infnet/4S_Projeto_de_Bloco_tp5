@@ -1,0 +1,481 @@
+modelo,tarefa,variante,id,esperado,previsto,segundos
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N01,outro,investimento,6.441
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N02,outro,esgoto,5.737
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N03,outro,abastecimento,6.481
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N04,outro,outro,6.653
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N05,outro,qualidade,5.601
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N06,outro,qualidade,5.105
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N07,outro,investimento,6.348
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N08,outro,esgoto,10.576
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N09,outro,esgoto,6.64
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N10,outro,investimento,6.277
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N11,outro,esgoto,5.158
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N12,outro,investimento,5.93
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N13,outro,investimento,5.299
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N14,outro,esgoto,6.492
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N15,outro,esgoto,4.781
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,N16,outro,investimento,5.922
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R01,abastecimento,abastecimento,5.612
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R02,abastecimento,abastecimento,5.008
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R03,abastecimento,abastecimento,4.857
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R04,abastecimento,qualidade,5.285
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R05,abastecimento,investimento,4.771
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R06,abastecimento,abastecimento,5.196
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R07,qualidade,qualidade,5.081
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R08,qualidade,saude,4.805
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R09,qualidade,qualidade,4.661
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R10,qualidade,qualidade,4.598
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R11,qualidade,abastecimento,4.546
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R12,qualidade,qualidade,4.631
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R13,esgoto,esgoto,4.676
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R14,esgoto,esgoto,4.992
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R15,esgoto,esgoto,4.868
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R16,esgoto,esgoto,4.73
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R17,esgoto,esgoto,4.227
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R18,esgoto,esgoto,4.883
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R19,saude,abastecimento,4.954
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R20,saude,saude,4.877
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R21,saude,abastecimento,4.503
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R22,saude,qualidade,4.521
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R23,saude,abastecimento,4.681
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R24,saude,abastecimento,4.957
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R25,investimento,esgoto,4.578
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R26,investimento,esgoto,4.443
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R27,investimento,investimento,5.471
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R28,investimento,investimento,4.735
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R29,investimento,esgoto,4.735
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R30,investimento,investimento,4.62
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R31,outro,abastecimento,4.739
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,tema,zero-shot,R32,outro,abastecimento,4.817
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N01,neutro,negativo,3.115
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N02,negativo,negativo,2.706
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N03,neutro,negativo,3.01
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N04,neutro,negativo,3.151
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N05,positivo,positivo,2.698
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N06,negativo,negativo,2.55
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N07,positivo,negativo,3.076
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N08,negativo,negativo,5.079
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N09,positivo,positivo,3.276
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N10,negativo,negativo,3.055
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N11,negativo,negativo,2.536
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N12,negativo,negativo,2.721
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N13,neutro,negativo,2.563
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N14,negativo,negativo,3.133
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N15,neutro,positivo,2.284
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,N16,positivo,positivo,2.839
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R01,negativo,neutro,2.538
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R02,negativo,neutro,2.345
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R03,neutro,negativo,2.379
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R04,positivo,positivo,2.595
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R05,negativo,negativo,2.424
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R06,negativo,negativo,2.706
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R07,negativo,negativo,2.369
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R08,negativo,negativo,2.221
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R09,neutro,negativo,2.254
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R10,positivo,neutro,2.262
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R11,negativo,negativo,2.238
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R12,positivo,negativo,2.273
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R13,negativo,negativo,2.168
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R14,negativo,neutro,2.325
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R15,negativo,negativo,2.334
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R16,positivo,negativo,2.238
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R17,negativo,negativo,1.963
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R18,neutro,negativo,2.328
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R19,negativo,negativo,2.406
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R20,negativo,negativo,2.381
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R21,neutro,negativo,2.112
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R22,positivo,negativo,2.171
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R23,negativo,negativo,2.215
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R24,neutro,negativo,2.407
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R25,neutro,negativo,2.285
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R26,negativo,neutro,2.063
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R27,positivo,negativo,2.542
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R28,positivo,positivo,2.306
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R29,neutro,positivo,2.203
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R30,negativo,negativo,2.224
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R31,negativo,negativo,2.309
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,sentimento,zero-shot,R32,positivo,positivo,2.283
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N01,outro,abastecimento,1.745
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N02,outro,abastecimento,1.623
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N03,outro,abastecimento,1.54
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N04,outro,abastecimento,1.551
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N05,outro,abastecimento,1.433
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N06,outro,abastecimento,1.634
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N07,outro,abastecimento,1.532
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N08,outro,abastecimento,1.775
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N09,outro,abastecimento,1.555
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N10,outro,abastecimento,1.57
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N11,outro,abastecimento,1.5
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N12,outro,abastecimento,1.55
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N13,outro,abastecimento,1.461
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N14,outro,abastecimento,1.612
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N15,outro,abastecimento,1.524
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,N16,outro,abastecimento,1.607
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R01,abastecimento,abastecimento,1.512
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R02,abastecimento,abastecimento,1.439
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R03,abastecimento,abastecimento,1.452
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R04,abastecimento,abastecimento,1.467
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R05,abastecimento,abastecimento,1.452
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R06,abastecimento,abastecimento,1.489
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R07,qualidade,qualidade,1.447
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R08,qualidade,abastecimento,1.377
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R09,qualidade,abastecimento,1.313
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R10,qualidade,abastecimento,1.43
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R11,qualidade,qualidade,1.389
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R12,qualidade,abastecimento,1.338
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R13,esgoto,qualidade,1.421
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R14,esgoto,abastecimento,1.445
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R15,esgoto,qualidade,1.432
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R16,esgoto,abastecimento,1.349
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R17,esgoto,abastecimento,1.384
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R18,esgoto,abastecimento,1.405
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R19,saude,abastecimento,1.388
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R20,saude,abastecimento,1.38
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R21,saude,abastecimento,1.368
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R22,saude,abastecimento,1.39
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R23,saude,abastecimento,1.441
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R24,saude,abastecimento,1.349
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R25,investimento,abastecimento,1.31
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R26,investimento,abastecimento,1.446
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R27,investimento,abastecimento,1.328
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R28,investimento,abastecimento,1.481
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R29,investimento,abastecimento,1.424
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R30,investimento,abastecimento,1.339
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R31,outro,qualidade,1.47
+Qwen/Qwen2.5-0.5B-Instruct,tema,prompt com definições,R32,outro,abastecimento,1.324
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N01,neutro,positivo,0.729
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N02,negativo,negativo,0.712
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N03,neutro,positivo,0.692
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N04,neutro,positivo,0.693
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N05,positivo,positivo,0.635
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N06,negativo,negativo,0.601
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N07,positivo,positivo,0.767
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N08,negativo,positivo,0.854
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N09,positivo,positivo,0.701
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N10,negativo,positivo,0.694
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N11,negativo,negativo,0.601
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N12,negativo,positivo,0.65
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N13,neutro,positivo,0.636
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N14,negativo,positivo,0.754
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N15,neutro,positivo,0.621
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,N16,positivo,positivo,0.696
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R01,negativo,negativo,0.613
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R02,negativo,negativo,0.548
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R03,neutro,negativo,0.575
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R04,positivo,positivo,0.627
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R05,negativo,negativo,0.622
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R06,negativo,negativo,0.602
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R07,negativo,negativo,0.551
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R08,negativo,negativo,0.63
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R09,neutro,negativo,0.62
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R10,positivo,positivo,0.555
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R11,negativo,negativo,0.569
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R12,positivo,negativo,0.592
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R13,negativo,negativo,0.574
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R14,negativo,negativo,0.576
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R15,negativo,negativo,0.595
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R16,positivo,positivo,0.616
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R17,negativo,negativo,0.54
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R18,neutro,positivo,0.584
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R19,negativo,negativo,0.608
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R20,negativo,negativo,0.638
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R21,neutro,negativo,0.569
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R22,positivo,negativo,0.555
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R23,negativo,negativo,0.601
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R24,neutro,positivo,0.633
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R25,neutro,positivo,0.58
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R26,negativo,negativo,0.579
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R27,positivo,positivo,0.625
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R28,positivo,positivo,0.61
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R29,neutro,positivo,0.583
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R30,negativo,negativo,0.622
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R31,negativo,negativo,0.598
+Qwen/Qwen2.5-0.5B-Instruct,sentimento,prompt com definições,R32,positivo,positivo,0.547
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N01,outro,outro,4.334
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N02,outro,outro,4.211
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N03,outro,outro,4.455
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N04,outro,outro,4.469
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N05,outro,outro,3.912
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N06,outro,outro,4.159
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N07,outro,outro,4.519
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N08,outro,outro,4.654
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N09,outro,outro,4.351
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N10,outro,saude,4.596
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N11,outro,outro,4.397
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N12,outro,outro,4.386
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N13,outro,outro,4.126
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N14,outro,saude,4.186
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N15,outro,outro,4.041
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,N16,outro,outro,4.448
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R01,abastecimento,abastecimento,4.228
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R02,abastecimento,abastecimento,4.171
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R03,abastecimento,abastecimento,4.13
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R04,abastecimento,abastecimento,4.164
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R05,abastecimento,abastecimento,4.011
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R06,abastecimento,abastecimento,4.05
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R07,qualidade,qualidade,4.107
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R08,qualidade,abastecimento,4.207
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R09,qualidade,qualidade,3.983
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R10,qualidade,qualidade,4.031
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R11,qualidade,qualidade,4.016
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R12,qualidade,esgoto,4.05
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R13,esgoto,esgoto,4.006
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R14,esgoto,esgoto,4.083
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R15,esgoto,esgoto,3.989
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R16,esgoto,esgoto,4.021
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R17,esgoto,esgoto,4.058
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R18,esgoto,esgoto,4.069
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R19,saude,saude,4.103
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R20,saude,saude,3.977
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R21,saude,saude,4.032
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R22,saude,saude,4.011
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R23,saude,saude,4.075
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R24,saude,saude,4.092
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R25,investimento,esgoto,4.105
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R26,investimento,esgoto,3.988
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R27,investimento,investimento,4.095
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R28,investimento,esgoto,4.172
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R29,investimento,investimento,3.939
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R30,investimento,investimento,4.024
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R31,outro,outro,4.068
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt com definições,R32,outro,outro,4.048
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N01,neutro,positivo,2.183
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N02,negativo,negativo,2.046
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N03,neutro,negativo,2.071
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N04,neutro,positivo,2.056
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N05,positivo,positivo,2.006
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N06,negativo,negativo,1.887
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N07,positivo,positivo,2.179
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N08,negativo,negativo,2.528
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N09,positivo,positivo,2.177
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N10,negativo,negativo,2.106
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N11,negativo,negativo,1.944
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N12,negativo,negativo,2.037
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N13,neutro,positivo,1.953
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N14,negativo,negativo,2.239
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N15,neutro,positivo,1.937
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,N16,positivo,positivo,2.16
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R01,negativo,negativo,1.92
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R02,negativo,negativo,1.87
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R03,neutro,negativo,1.906
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R04,positivo,positivo,1.931
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R05,negativo,negativo,1.9
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R06,negativo,negativo,1.945
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R07,negativo,negativo,1.825
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R08,negativo,negativo,1.858
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R09,neutro,negativo,1.798
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R10,positivo,positivo,1.762
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R11,negativo,negativo,1.907
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R12,positivo,neutro,1.829
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R13,negativo,negativo,1.872
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R14,negativo,negativo,1.871
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R15,negativo,negativo,1.775
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R16,positivo,positivo,1.899
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R17,negativo,negativo,1.802
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R18,neutro,neutro,1.878
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R19,negativo,positivo,1.89
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R20,negativo,negativo,1.843
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R21,neutro,positivo,1.8
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R22,positivo,neutro,1.787
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R23,negativo,negativo,1.797
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R24,neutro,neutro,1.854
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R25,neutro,positivo,1.891
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R26,negativo,negativo,1.821
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R27,positivo,positivo,2.014
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R28,positivo,positivo,1.818
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R29,neutro,neutro,1.881
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R30,negativo,negativo,1.891
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R31,negativo,negativo,1.911
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt com definições,R32,positivo,positivo,1.827
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N01,outro,esgoto,1.916
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N02,outro,esgoto,1.874
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N03,outro,esgoto,1.853
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N04,outro,outro,1.952
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N05,outro,esgoto,1.83
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N06,outro,esgoto,1.839
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N07,outro,esgoto,2.049
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N08,outro,esgoto,2.429
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N09,outro,saude,1.974
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N10,outro,esgoto,1.899
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N11,outro,esgoto,1.742
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N12,outro,esgoto,1.899
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N13,outro,saude,1.787
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N14,outro,saude,2.032
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N15,outro,saude,1.693
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,N16,outro,saude,1.943
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R01,abastecimento,abastecimento,1.76
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R02,abastecimento,abastecimento,1.718
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R03,abastecimento,abastecimento,1.713
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R04,abastecimento,abastecimento,1.77
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R05,abastecimento,esgoto,1.625
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R06,abastecimento,esgoto,1.788
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R07,qualidade,esgoto,1.636
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R08,qualidade,esgoto,1.625
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R09,qualidade,esgoto,1.601
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R10,qualidade,esgoto,1.733
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R11,qualidade,esgoto,1.625
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R12,qualidade,esgoto,1.673
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R13,esgoto,esgoto,1.54
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R14,esgoto,esgoto,1.696
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R15,esgoto,esgoto,1.727
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R16,esgoto,esgoto,1.636
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R17,esgoto,esgoto,1.601
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R18,esgoto,esgoto,1.714
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R19,saude,saude,1.676
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R20,saude,esgoto,1.673
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R21,saude,saude,1.633
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R22,saude,esgoto,1.626
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R23,saude,saude,1.606
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R24,saude,esgoto,1.698
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R25,investimento,esgoto,1.633
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R26,investimento,esgoto,1.603
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R27,investimento,esgoto,1.769
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R28,investimento,esgoto,1.627
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R29,investimento,esgoto,1.679
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R30,investimento,esgoto,1.59
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R31,outro,esgoto,1.633
+Qwen/Qwen2.5-1.5B-Instruct,tema,prompt simples,R32,outro,outro,1.687
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N01,neutro,neutro,1.667
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N02,negativo,negativo,1.498
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N03,neutro,negativo,1.534
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N04,neutro,neutro,1.655
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N05,positivo,positivo,1.533
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N06,negativo,negativo,1.381
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N07,positivo,negativo,1.715
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N08,negativo,negativo,2.047
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N09,positivo,positivo,1.672
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N10,negativo,neutro,1.492
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N11,negativo,negativo,1.368
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N12,negativo,negativo,1.504
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N13,neutro,positivo,1.435
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N14,negativo,negativo,1.669
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N15,neutro,positivo,1.417
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,N16,positivo,positivo,1.561
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R01,negativo,negativo,1.369
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R02,negativo,negativo,1.322
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R03,neutro,negativo,1.328
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R04,positivo,neutro,1.423
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R05,negativo,negativo,1.339
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R06,negativo,negativo,1.419
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R07,negativo,negativo,1.353
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R08,negativo,negativo,1.286
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R09,neutro,negativo,1.263
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R10,positivo,positivo,1.309
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R11,negativo,negativo,1.353
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R12,positivo,neutro,1.28
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R13,negativo,negativo,1.285
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R14,negativo,negativo,1.37
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R15,negativo,negativo,1.384
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R16,positivo,positivo,1.266
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R17,negativo,negativo,1.263
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R18,neutro,neutro,1.319
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R19,negativo,positivo,1.324
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R20,negativo,negativo,1.321
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R21,neutro,positivo,1.245
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R22,positivo,neutro,1.268
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R23,negativo,negativo,1.313
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R24,neutro,neutro,1.324
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R25,neutro,positivo,1.318
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R26,negativo,negativo,1.317
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R27,positivo,positivo,1.405
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R28,positivo,positivo,1.295
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R29,neutro,neutro,1.317
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R30,negativo,negativo,1.257
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R31,negativo,negativo,1.319
+Qwen/Qwen2.5-1.5B-Instruct,sentimento,prompt simples,R32,positivo,positivo,1.274
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N01,outro,outro,8.376
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N02,outro,outro,8.246
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N03,outro,outro,8.302
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N04,outro,outro,8.05
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N05,outro,outro,8.36
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N06,outro,outro,8.435
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N07,outro,outro,8.084
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N08,outro,outro,8.897
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N09,outro,outro,8.331
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N10,outro,outro,9.314
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N11,outro,outro,9.084
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N12,outro,outro,9.466
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N13,outro,outro,8.815
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N14,outro,outro,9.253
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N15,outro,outro,8.667
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,N16,outro,outro,8.776
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R01,abastecimento,abastecimento,8.259
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R02,abastecimento,abastecimento,8.057
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R03,abastecimento,abastecimento,8.083
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R04,abastecimento,abastecimento,8.138
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R05,abastecimento,abastecimento,8.023
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R06,abastecimento,abastecimento,8.051
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R07,qualidade,qualidade,7.879
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R08,qualidade,abastecimento,8.053
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R09,qualidade,qualidade,7.873
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R10,qualidade,qualidade,7.938
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R11,qualidade,qualidade,8.104
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R12,qualidade,investimento,7.839
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R13,esgoto,esgoto,8.017
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R14,esgoto,esgoto,7.966
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R15,esgoto,esgoto,8.019
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R16,esgoto,esgoto,7.944
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R17,esgoto,esgoto,7.819
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R18,esgoto,esgoto,7.952
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R19,saude,saude,8.12
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R20,saude,saude,8.518
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R21,saude,saude,8.037
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R22,saude,abastecimento,7.817
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R23,saude,saude,7.837
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R24,saude,saude,7.86
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R25,investimento,esgoto,7.95
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R26,investimento,abastecimento,7.814
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R27,investimento,investimento,8.102
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R28,investimento,investimento,7.994
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R29,investimento,investimento,7.898
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R30,investimento,investimento,7.899
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R31,outro,outro,7.853
+Qwen/Qwen2.5-3B-Instruct,tema,prompt com definições,R32,outro,outro,7.943
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N01,neutro,neutro,4.155
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N02,negativo,negativo,3.93
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N03,neutro,neutro,4.003
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N04,neutro,neutro,4.194
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N05,positivo,neutro,3.852
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N06,negativo,negativo,3.814
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N07,positivo,neutro,4.209
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N08,negativo,negativo,4.921
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N09,positivo,positivo,4.152
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N10,negativo,neutro,4.419
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N11,negativo,negativo,4.002
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N12,negativo,negativo,4.118
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N13,neutro,neutro,3.822
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N14,negativo,neutro,4.261
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N15,neutro,neutro,3.714
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,N16,positivo,neutro,4.162
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R01,negativo,negativo,3.963
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R02,negativo,negativo,3.918
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R03,neutro,neutro,3.808
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R04,positivo,positivo,3.987
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R05,negativo,neutro,3.742
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R06,negativo,negativo,4.114
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R07,negativo,negativo,4.339
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R08,negativo,negativo,4.097
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R09,neutro,neutro,4.022
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R10,positivo,positivo,4.019
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R11,negativo,negativo,3.912
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R12,positivo,neutro,3.92
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R13,negativo,negativo,3.914
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R14,negativo,negativo,4.084
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R15,negativo,negativo,4.067
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R16,positivo,positivo,4.001
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R17,negativo,negativo,3.824
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R18,neutro,neutro,3.924
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R19,negativo,neutro,3.961
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R20,negativo,negativo,3.962
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R21,neutro,neutro,3.928
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R22,positivo,neutro,3.803
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R23,negativo,negativo,3.86
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R24,neutro,neutro,4.016
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R25,neutro,neutro,3.971
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R26,negativo,negativo,3.913
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R27,positivo,positivo,4.112
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R28,positivo,positivo,3.953
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R29,neutro,neutro,3.885
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R30,negativo,neutro,3.964
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R31,negativo,negativo,3.873
+Qwen/Qwen2.5-3B-Instruct,sentimento,prompt com definições,R32,positivo,neutro,3.908

@@ -1,0 +1,110 @@
+{
+  "precisao": [
+    {
+      "precisao": "float32",
+      "itens": 6,
+      "acertos": 6,
+      "segundos_por_texto": 4.07
+    },
+    {
+      "precisao": "bfloat16",
+      "itens": 6,
+      "acertos": 6,
+      "segundos_por_texto": 10.51
+    },
+    {
+      "precisao": "float16",
+      "itens": 6,
+      "acertos": 6,
+      "segundos_por_texto": 26.95
+    }
+  ],
+  "saida_livre": {
+    "itens": 48,
+    "fora_da_lista": 2,
+    "acertos": 40,
+    "exemplos_fora_da_lista": [
+      {
+        "id": "N01",
+        "resposta_do_modelo": "outra"
+      },
+      {
+        "id": "N13",
+        "resposta_do_modelo": "outra"
+      }
+    ]
+  },
+  "maquina": {
+    "sistema": "Windows 11",
+    "processador": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+    "nucleos_fisicos": 6,
+    "ram_gb": 47.9,
+    "python": "3.14.7",
+    "torch": "2.15.0+cpu",
+    "transformers": "5.23.0",
+    "threads_torch": 6,
+    "gpu_usada": false
+  },
+  "resumos": {
+    "Qwen/Qwen2.5-0.5B-Instruct": [
+      {
+        "noticia": "Chuvas ficam mais intensas no Norte, Centro-Oeste e Sudeste do país",
+        "segundos": 7.4,
+        "tokens_gerados": 75,
+        "resumo": "Chuvas intensas no Nordeste e Sudeste do Brasil, com alerta amarelo de perigo potencial para tempestades. Temperatura mínima de 14°C em São Paulo, 30°C em Belo Horizonte, 16°C em Campo Grande e 34°C em Cuiabá."
+      },
+      {
+        "noticia": "Chuvas provocam alagamentos e deslizamentos pelo interior paulista",
+        "segundos": 7.7,
+        "tokens_gerados": 80,
+        "resumo": "Alagamentos e deslizes provocados por chuvas intensas em São Paulo, São Sebastião, Presidente Prudente, Itapevi, São Luiz do Paraitinga, Jundiaí, Estiva Gerbi, Jaú e Arujá. Não houve feridos, mas o estado enfrenta pancadas de chuva leve ou moderada."
+      },
+      {
+        "noticia": "Governo monitora saúde de amazonenses em locais afetados por queimadas",
+        "segundos": 10.5,
+        "tokens_gerados": 113,
+        "resumo": "O governo monitoriza saúde e sistema Único de Saúde em áreas afetadas por incêndios florestais no Amazonas. Atuando com municípios e governadores, aplicações técnicas e apoio à gestão. Identificou 12 municípios necessitando de suporte."
+      }
+    ],
+    "Qwen/Qwen2.5-1.5B-Instruct": [
+      {
+        "noticia": "Chuvas ficam mais intensas no Norte, Centro-Oeste e Sudeste do país",
+        "segundos": 15.2,
+        "tokens_gerados": 48,
+        "resumo": "Chuvas intensas avançam pelo Nordeste e Centro-Oeste, com risco de tempestades. Região Norte enfrenta trovoadas severas. Temperaturas baixas em todo o Sul."
+      },
+      {
+        "noticia": "Chuvas provocam alagamentos e deslizamentos pelo interior paulista",
+        "segundos": 34.0,
+        "tokens_gerados": 137,
+        "resumo": "Chuvas intensas causam alagamentos, deslizamentos e interdições em São Paulo. Fortes rajadas de vento causam queda de árvores em São Sebastião. Deslizamento de terra em Presidente Prudente interdita via."
+      },
+      {
+        "noticia": "Governo monitora saúde de amazonenses em locais afetados por queimadas",
+        "segundos": 27.0,
+        "tokens_gerados": 99,
+        "resumo": "O governo monitora saúde dos amazonenses afetados por queimadas. Ministério atua com visitas técnicas e apoio à gestão. 12 municípios necessitam de suporte."
+      }
+    ],
+    "Qwen/Qwen2.5-3B-Instruct": [
+      {
+        "noticia": "Chuvas ficam mais intensas no Norte, Centro-Oeste e Sudeste do país",
+        "segundos": 71.3,
+        "tokens_gerados": 135,
+        "resumo": "Chuvas intensas são esperadas no Norte, Centro-Oeste e Sudeste, com alerta de tempestades para partes do Sudeste e Amazônia. Em alguns estados, como Amapá e parte do Pará, não há previsão de chuva, mas pode haver nebulosidade. Temperaturas variam entre 14°C e 38°C em diferentes capitais, com mínimas em 9°C e máximas de 38°C."
+      },
+      {
+        "noticia": "Chuvas provocam alagamentos e deslizamentos pelo interior paulista",
+        "segundos": 78.0,
+        "tokens_gerados": 160,
+        "resumo": "Chuvas intensas provocaram alagamentos, deslizamentos e interdições de rodovias em vários municípios paulistas. Em São Sebastião, uma cobertura de garagem caiu devido a rajadas de vento. Em Presidente Prudente, um deslizamento de terra interditou uma via."
+      },
+      {
+        "noticia": "Governo monitora saúde de amazonenses em locais afetados por queimadas",
+        "segundos": 79.9,
+        "tokens_gerados": 160,
+        "resumo": "O Ministério da Saúde está monitorando os impactos das queimadas na saúde dos amazonenses, em parceria com o governo estadual e municipais. A medida visa articular medidas preventivas para manter o abastecimento de insumos essenciais para assistência à saúde. Até agora, 12 municípios precisam de apoio nos serviços de saúde, especialmente para crianças, idosos, gestantes e pessoas com doenças preexistentes."
+      }
+    ]
+  }
+}

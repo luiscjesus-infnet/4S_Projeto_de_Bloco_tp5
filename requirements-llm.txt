@@ -1,0 +1,11 @@
+-r requirements-api.txt
+# modelo de linguagem local (HuggingFace). O torch do PyPI no Windows é a versão só de CPU.
+# Com placa NVIDIA, instale antes o torch com CUDA (https://pytorch.org/get-started/locally/).
+torch>=2.9
+transformers>=5.0
+huggingface_hub>=0.30
+# benchmark e gráfico
+psutil>=5.9
+sentencepiece>=0.2
+protobuf>=5.0
+matplotlib>=3.8

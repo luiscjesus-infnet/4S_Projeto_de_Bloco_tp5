@@ -1,0 +1,49 @@
+id,origem,texto,tema,sentimento
+N01,noticia_real,"Confira o que muda no licenciamento ambiental da aquicultura. Novas regras entram em vigor em abril de 2027, e valem para produtores de peixe, crustáceos, moluscos e algas em ambientes controlados.",outro,neutro
+N02,noticia_real,"Incêndios avançam sobre o oeste do Pará e deixam ar insalubre. Há 922 focos ativos no estado, de acordo com o Instituto Nacional de Pesquisas Espaciais.",outro,negativo
+N03,noticia_real,"Chuvas ficam mais intensas no Norte, Centro-Oeste e Sudeste do país. Zona de convergência deixa parte da Amazônia e do Sudeste em alerta, de acordo com o Instituto Nacional de Meteorologia.",outro,neutro
+N04,noticia_real,COP17 da Biodiversidade começa segunda-feira na Armênia. A conferência é realizada a cada dois anos e tem como objetivo debater estratégias e firmar acordos para enfrentar a crise global da perda de biodiversidade.,outro,neutro
+N05,noticia_real,Rio: reserva marinha alia proteção ambiental com atividades econômicas. Objetivo da unidade é conservar a biodiversidade local ao mesmo tempo que fortalece a pesa artesanal.,outro,positivo
+N06,noticia_real,Chuvas provocam alagamentos e deslizamentos pelo interior paulista. Previsão meteorológica para este sábado no estado é de pancadas de chuva leve ou moderada.,outro,negativo
+N07,noticia_real,"Desmatamento cai 41,8% na Amazônia e 23,8% no Cerrado em um ano. O desmatamento nos dois biomas chegou às menores extensões das séries históricas monitoradas pelo Instituto Nacional de Pesquisas Espaciais (Inpe)",outro,positivo
+N08,noticia_real,"Manaus é capital com maior poluição atmosférica do país nesta sexta. Manaus voltou a registrar a pior qualidade do ar entre as capitais brasileiras na manhã desta sexta-feira (16) por causa da fumaça provocada por queimadas. Por volta das seis horas da manhã, a plataforma internacional IQAir registrou índice de qualidade do ar de 167, classificado como insalubre. Com isso, a capital amazonense voltou ao primeiro lugar no ranking de capitais com",outro,negativo
+N09,noticia_real,"Consultas por lesões pré-cancerígenas caem após vacina contra HPV. Estudo aponta que, ao prevenir a infecção pelo vírus, a vacinação também impede o surgimento das lesões que podem evoluir para câncer.",outro,positivo
+N10,noticia_real,"Agricultura confirma foco de doença de Newcastle em Santa Catarina. Mapa esclarece que medidas de controle, contenção e erradicação do foco serão executadas conforme as diretrizes do Plano de Contingência para Doença de Newcastle.",outro,negativo
+N11,noticia_real,Anvisa proíbe lotes de medicamento para tratar câncer. Detentora do registro do produto identificou unidades dos lotes com características divergentes.,outro,negativo
+N12,noticia_real,"Anvisa determina apreensão de lote falsificado de toxina botulínica. Itens como data de validade incorreta, frasco diferente e problemas no rótulo foram identificados no produto.",outro,negativo
+N13,noticia_real,"Governo monitora saúde de amazonenses em locais afetados por queimadas. Crianças, idosos, gestantes e pessoas com comorbidades são prioridade",outro,neutro
+N14,noticia_real,"A cada 72 segundos, uma pessoa morre por doença cardiovascular no país. Dados do Cardiômetro - ferramenta da Sociedade Brasileira de Cardiologia - mostram uma média de 1.194 mortes por dia, ou cerca de 50 óbitos por hora.",outro,negativo
+N15,noticia_real,Congresso aprova exame obrigatório para exercício da medicina. Enamed vale para alunos que ingressaram a partir de junho de 2026,outro,neutro
+N16,noticia_real,"Hospital Geral de Bonsucesso chegou à marca de 450 leitos para o SUS. Unidade passou por reestruturação e voltou a contar com emergência 24 horas, agora com 390 leitos.",outro,positivo
+R01,relato_de_campo,"Na Cidade Operária, em São Luís, a água só chega de madrugada e três vezes por semana. Muita gente está comprando galão.",abastecimento,negativo
+R02,relato_de_campo,O bairro Jardim Primavera está há quatro dias sem água na torneira e o caminhão-pipa não apareceu.,abastecimento,negativo
+R03,relato_de_campo,A companhia anunciou rodízio no abastecimento a partir de segunda-feira por causa do nível baixo do reservatório.,abastecimento,neutro
+R04,relato_de_campo,"Depois da troca da bomba na estação elevatória, a pressão da água voltou ao normal nos bairros altos de Rio Branco.",abastecimento,positivo
+R05,relato_de_campo,A comunidade ribeirinha depende de poço e de água da chuva; a rede de distribuição não chega até lá.,abastecimento,negativo
+R06,relato_de_campo,No conjunto habitacional a caixa d'água coletiva esvazia antes do meio-dia e as famílias ficam sem água à tarde.,abastecimento,negativo
+R07,relato_de_campo,A água que sai da torneira está barrenta e com cheiro forte de cloro desde a última chuva.,qualidade,negativo
+R08,relato_de_campo,O laudo do laboratório estadual encontrou coliformes na água do poço que abastece a escola municipal.,qualidade,negativo
+R09,relato_de_campo,A prefeitura orientou ferver a água antes de beber até sair o resultado da análise da rede.,qualidade,neutro
+R10,relato_de_campo,"Depois da limpeza do reservatório, a água voltou a ficar transparente e sem gosto estranho.",qualidade,positivo
+R11,relato_de_campo,Os vizinhos reclamam de água amarelada e com pequenas partículas pretas saindo do chuveiro.,qualidade,negativo
+R12,relato_de_campo,Os testes mensais de turbidez e cloro da estação de tratamento ficaram dentro do padrão exigido.,qualidade,positivo
+R13,relato_de_campo,"Tem esgoto correndo a céu aberto na rua principal do bairro, bem na frente da creche.",esgoto,negativo
+R14,relato_de_campo,"A rede coletora foi instalada, mas as casas ainda não foram ligadas e o esgoto continua indo para a fossa.",esgoto,negativo
+R15,relato_de_campo,Uma tubulação estourou e o esgoto está sendo despejado direto no igarapé que passa atrás das casas.,esgoto,negativo
+R16,relato_de_campo,"Depois que a rede de esgoto chegou à minha rua, acabou o mau cheiro que vinha da vala.",esgoto,positivo
+R17,relato_de_campo,O cheiro de esgoto perto do canal fica insuportável nos dias de calor.,esgoto,negativo
+R18,relato_de_campo,Funcionários da companhia passaram de casa em casa conferindo quais imóveis já estão ligados à rede de esgoto.,esgoto,neutro
+R19,relato_de_campo,"O posto de saúde atendeu muitas crianças com diarreia esta semana, quase todas de ruas sem água tratada.",saude,negativo
+R20,relato_de_campo,"Depois da enchente, a vigilância confirmou casos de leptospirose em moradores que andaram na água da rua.",saude,negativo
+R21,relato_de_campo,A secretaria de saúde fez mutirão de exames de verminose nas escolas da zona rural.,saude,neutro
+R22,relato_de_campo,Os casos de hepatite A caíram no bairro desde que a água encanada chegou.,saude,positivo
+R23,relato_de_campo,As internações por doenças ligadas à água sem tratamento aumentaram no hospital regional no último trimestre.,saude,negativo
+R24,relato_de_campo,A unidade básica passou a registrar à parte os atendimentos por diarreia para acompanhar a situação do bairro.,saude,neutro
+R25,relato_de_campo,O governo do estado abriu licitação para ampliar a rede de esgoto em doze municípios do interior.,investimento,neutro
+R26,relato_de_campo,A obra da nova adutora está parada há oito meses e o canteiro foi abandonado.,investimento,negativo
+R27,relato_de_campo,"A concessionária anunciou 300 milhões de reais para levar água e esgoto a todos até 2033, como exige o marco do saneamento.",investimento,positivo
+R28,relato_de_campo,Foi inaugurada a estação de tratamento de água que vai atender 40 mil moradores da região metropolitana.,investimento,positivo
+R29,relato_de_campo,A câmara municipal aprovou o contrato de concessão dos serviços de água e esgoto por 35 anos.,investimento,neutro
+R30,relato_de_campo,O dinheiro prometido para a obra de saneamento do bairro foi remanejado para outra área do orçamento.,investimento,negativo
+R31,relato_de_campo,A iluminação da praça está apagada há duas semanas e a rua ficou perigosa à noite.,outro,negativo
+R32,relato_de_campo,A feira de artesanato do sábado reuniu muitos visitantes e movimentou o comércio do centro.,outro,positivo

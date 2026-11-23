@@ -1,0 +1,6 @@
+modelo,familia,variante,acerto_tema,s_por_texto_tema,acerto_sentimento,s_por_texto_sentimento,itens,carga_s,memoria_pico_gb,disco_gb,resumo_s_medio
+MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,encoder,zero-shot,19,4.92,26,2.37,48,1.5,1.11,0.52,
+Qwen/Qwen2.5-0.5B-Instruct,decoder,prompt com definições,8,1.45,30,0.61,48,5.7,2.79,0.92,8.5
+Qwen/Qwen2.5-1.5B-Instruct,decoder,prompt com definições,41,4.09,36,1.9,48,7.3,6.93,2.88,25.4
+Qwen/Qwen2.5-1.5B-Instruct,decoder,prompt simples,15,1.71,35,1.35,48,7.3,6.93,2.88,25.4
+Qwen/Qwen2.5-3B-Instruct,decoder,prompt com definições,43,8.05,37,3.96,48,10.5,12.77,5.75,76.4

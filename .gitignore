@@ -1,0 +1,14 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+.streamlit/secrets.toml
+
+# HTML bruto das coletas: serve só para conferência local e o conteúdo não é meu
+data/raw/*
+!data/raw/.gitkeep
+
+# modelos do HuggingFace (vários GB): baixar com python -m src.baixar_modelo
+modelos/
+data/avaliacao/_parciais/

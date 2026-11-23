@@ -1,0 +1,218 @@
+[
+  {
+    "id_ibge": 12,
+    "sigla": "AC",
+    "uf_nome": "Acre",
+    "regiao": "Norte",
+    "populacao": 884372,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 27,
+    "sigla": "AL",
+    "uf_nome": "Alagoas",
+    "regiao": "Nordeste",
+    "populacao": 3220848,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 16,
+    "sigla": "AP",
+    "uf_nome": "Amapá",
+    "regiao": "Norte",
+    "populacao": 806517,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 13,
+    "sigla": "AM",
+    "uf_nome": "Amazonas",
+    "regiao": "Norte",
+    "populacao": 4321616,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 29,
+    "sigla": "BA",
+    "uf_nome": "Bahia",
+    "regiao": "Nordeste",
+    "populacao": 14870907,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 23,
+    "sigla": "CE",
+    "uf_nome": "Ceará",
+    "regiao": "Nordeste",
+    "populacao": 9268836,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 53,
+    "sigla": "DF",
+    "uf_nome": "Distrito Federal",
+    "regiao": "Centro-Oeste",
+    "populacao": 2996899,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 32,
+    "sigla": "ES",
+    "uf_nome": "Espírito Santo",
+    "regiao": "Sudeste",
+    "populacao": 4126854,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 52,
+    "sigla": "GO",
+    "uf_nome": "Goiás",
+    "regiao": "Centro-Oeste",
+    "populacao": 7423629,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 21,
+    "sigla": "MA",
+    "uf_nome": "Maranhão",
+    "regiao": "Nordeste",
+    "populacao": 7018211,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 51,
+    "sigla": "MT",
+    "uf_nome": "Mato Grosso",
+    "regiao": "Centro-Oeste",
+    "populacao": 3893659,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 50,
+    "sigla": "MS",
+    "uf_nome": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste",
+    "populacao": 2924631,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 31,
+    "sigla": "MG",
+    "uf_nome": "Minas Gerais",
+    "regiao": "Sudeste",
+    "populacao": 21393441,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 15,
+    "sigla": "PA",
+    "uf_nome": "Pará",
+    "regiao": "Norte",
+    "populacao": 8711196,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 25,
+    "sigla": "PB",
+    "uf_nome": "Paraíba",
+    "regiao": "Nordeste",
+    "populacao": 4164468,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 41,
+    "sigla": "PR",
+    "uf_nome": "Paraná",
+    "regiao": "Sul",
+    "populacao": 11890517,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 26,
+    "sigla": "PE",
+    "uf_nome": "Pernambuco",
+    "regiao": "Nordeste",
+    "populacao": 9562007,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 22,
+    "sigla": "PI",
+    "uf_nome": "Piauí",
+    "regiao": "Nordeste",
+    "populacao": 3384547,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 33,
+    "sigla": "RJ",
+    "uf_nome": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "populacao": 17223547,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 24,
+    "sigla": "RN",
+    "uf_nome": "Rio Grande do Norte",
+    "regiao": "Nordeste",
+    "populacao": 3455236,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 43,
+    "sigla": "RS",
+    "uf_nome": "Rio Grande do Sul",
+    "regiao": "Sul",
+    "populacao": 11233263,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 11,
+    "sigla": "RO",
+    "uf_nome": "Rondônia",
+    "regiao": "Norte",
+    "populacao": 1751950,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 14,
+    "sigla": "RR",
+    "uf_nome": "Roraima",
+    "regiao": "Norte",
+    "populacao": 738772,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 42,
+    "sigla": "SC",
+    "uf_nome": "Santa Catarina",
+    "regiao": "Sul",
+    "populacao": 8187029,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 35,
+    "sigla": "SP",
+    "uf_nome": "São Paulo",
+    "regiao": "Sudeste",
+    "populacao": 46081801,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 28,
+    "sigla": "SE",
+    "uf_nome": "Sergipe",
+    "regiao": "Nordeste",
+    "populacao": 2299425,
+    "ano_populacao": "2025"
+  },
+  {
+    "id_ibge": 17,
+    "sigla": "TO",
+    "uf_nome": "Tocantins",
+    "regiao": "Norte",
+    "populacao": 1586859,
+    "ano_populacao": "2025"
+  }
+]

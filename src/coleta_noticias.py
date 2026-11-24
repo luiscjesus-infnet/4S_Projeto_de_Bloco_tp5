@@ -30,8 +30,8 @@ ARQUIVO_SAIDA = BASE / "data" / "processed" / "noticias.csv"
 
 SITE = "https://agenciabrasil.ebc.com.br"
 SECOES = ["meio-ambiente", "saude"]
-MAX_POR_SECAO = 8
-AGENTE = "PainelODS6-TP3/1.0 (trabalho academico INFNET)"
+MAX_POR_SECAO = 12
+AGENTE = "PainelODS6/1.1 (trabalho academico INFNET)"
 
 # palavras que ligam a notícia ao ODS 6 (água e saneamento).
 # Tirei "rio" da lista porque casava com "Rio de Janeiro" e marcava notícia errada.
@@ -136,14 +136,22 @@ def main():
         print("Nenhuma notícia coletada; mantive o CSV anterior.")
         return
 
+    # TP5: a base passou a ser acumulada. As notícias de coletas anteriores ficam (com a
+    # data em que foram coletadas) e só entram as novas, comparando pelo link.
     coletado_em = datetime.now().strftime("%Y-%m-%d %H:%M")
     campos = ["secao", "titulo", "url", "publicado_em", "resumo", "texto", "palavras", "tema_ods6", "fonte", "coletado_em"]
+    anteriores = []
+    if ARQUIVO_SAIDA.exists():
+        with open(ARQUIVO_SAIDA, newline="", encoding="utf-8") as arquivo:
+            anteriores = list(csv.DictReader(arquivo))
+    links = {n["url"] for n in anteriores}
+    novas = [{**n, "fonte": "Agência Brasil (CC BY)", "coletado_em": coletado_em} for n in noticias if n["url"] not in links]
+    todas = sorted(anteriores + novas, key=lambda n: n["publicado_em"], reverse=True)
     with open(ARQUIVO_SAIDA, "w", newline="", encoding="utf-8") as arquivo:
-        escritor = csv.DictWriter(arquivo, fieldnames=campos)
+        escritor = csv.DictWriter(arquivo, fieldnames=campos, extrasaction="ignore")
         escritor.writeheader()
-        for n in noticias:
-            escritor.writerow({**n, "fonte": "Agência Brasil (CC BY)", "coletado_em": coletado_em})
-    print(f"{len(noticias)} notícias gravadas em {ARQUIVO_SAIDA}")
+        escritor.writerows(todas)
+    print(f"{len(novas)} notícias novas; {len(todas)} no total em {ARQUIVO_SAIDA}")
 
 
 if __name__ == "__main__":

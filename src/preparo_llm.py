@@ -33,7 +33,7 @@ PROMPTS_PLANEJADOS = {
     ),
     "pergunta_resposta": (
         "Use somente as fichas abaixo para responder. Se a resposta não estiver nelas, diga que não sabe. "
-        "Cite a UF e o ano de cada número.\n\nFichas:\n{contexto}\n\nPergunta: {pergunta}"
+        "Diga a UF e o ano de cada número.\n\nFichas:\n{contexto}\n\nPergunta: {pergunta}"
     ),
     "relatorio_prioridades": (
         "Com base nas fichas abaixo, escreva um parágrafo para um gestor público explicando quais "

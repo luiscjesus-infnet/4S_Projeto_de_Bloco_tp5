@@ -33,10 +33,9 @@ def enviar_observacao(sigla, autor, tipo, texto):
             json={"sigla": sigla, "autor": autor, "tipo": tipo, "texto": texto},
             timeout=TEMPO_LIMITE,
         )
-        if resposta.status_code == 422:
-            problemas = [f"{'/'.join(map(str, d['loc'][1:]))}: {d['msg']}" for d in resposta.json()["detail"]]
-            return None, "Dados recusados pela API -> " + "; ".join(problemas)
-        resposta.raise_for_status()
+        if resposta.status_code >= 400:
+            # desde o TP4 os erros da API vêm no formato próprio (status, erro, mensagem, dica)
+            return None, _mensagem_de_erro(resposta)
         return resposta.json(), None
     except requests.ConnectionError:
         return None, f"A API não respondeu em {API_URL}. Ela está rodando?"
@@ -89,3 +88,36 @@ def processar_texto(texto, tipo_analise):
 def status_modelo():
     """GET /modelo: se o modelo carregou, qual é e onde roda."""
     return consultar("/modelo")
+
+
+# ---------------------------------------------------------------- assistente (TP5)
+# o modelo local em CPU leva de 10 a 40 s por resposta; espero um pouco mais que o
+# limite da API (90 s) para receber o 504 dela em vez de desistir antes
+TEMPO_LIMITE_CONVERSA = 120
+MAX_FALAS = 40   # mesmo limite da API
+
+
+def motores():
+    """GET /motores: quais motores de IA o assistente pode usar agora."""
+    return consultar("/motores")
+
+
+def conversar(pergunta, historico, notas=None, memoria="janela_notas", motor=None):
+    """
+    POST /conversar. O histórico e as notas vêm do st.session_state do painel: é o painel
+    que lembra a conversa, a API não guarda nada. Devolve (resposta, erro).
+    """
+    falas = [{"role": m["role"], "content": m["content"]} for m in historico][-MAX_FALAS:]
+    corpo = {"pergunta": pergunta, "historico": falas, "notas": notas, "memoria": memoria,
+             "motor": motor, "mostrar_pedido": True}
+    try:
+        resposta = requests.post(f"{API_URL}/conversar", json=corpo, timeout=TEMPO_LIMITE_CONVERSA)
+    except requests.ConnectionError:
+        return None, f"A API não respondeu em {API_URL}. Ela está rodando?"
+    except requests.Timeout:
+        return None, f"A API não respondeu em {TEMPO_LIMITE_CONVERSA} s. Tente de novo ou troque o motor."
+    except requests.RequestException as erro:
+        return None, f"Falha ao falar com a API: {erro}"
+    if resposta.status_code != 200:
+        return None, _mensagem_de_erro(resposta)
+    return resposta.json(), None

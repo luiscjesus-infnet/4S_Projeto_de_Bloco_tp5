@@ -14,6 +14,13 @@ Tabela de cenários -> código HTTP:
     modelo passou do tempo limite ................... 504
     modelo devolveu algo fora do formato ............ 502
     qualquer outra falha inesperada ................. 500
+
+Erros novos do TP5 (motor que chama um serviço externo de IA):
+    motor via API sem chave/modelo no .env .......... 503
+    chave recusada pelo serviço (401/403) ........... 503
+    serviço limitou os pedidos (429) ................ 503 + Retry-After
+    serviço caiu ou respondeu erro (5xx) ............ 502
+    serviço passou do tempo limite .................. 504
 """
 import logging
 
@@ -23,12 +30,16 @@ from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from src.motor_llm import (
+    ChaveRecusada,
     ErroDoMotor,
+    LimiteDoServico,
     ModeloIndisponivel,
     ModeloNaoEncontrado,
+    MotorNaoConfigurado,
     MotorOcupado,
     RespostaInvalida,
     SemMemoria,
+    ServicoExternoFalhou,
     TempoEsgotado,
 )
 
@@ -66,7 +77,31 @@ MAPA_ERROS_MOTOR = {
         "O modelo respondeu, mas a resposta veio fora do formato esperado e foi descartada.",
         "Tente de novo; se repetir, reformule o texto.",
     ),
+    MotorNaoConfigurado: (
+        503, "motor_api_nao_configurado",
+        "O motor que usa um serviço externo de IA não está configurado.",
+        "Copie .env.exemplo para .env, preencha LLM_API_CHAVE e LLM_API_MODELO e reinicie a API. "
+        "O motor local continua disponível.",
+    ),
+    ChaveRecusada: (
+        503, "chave_recusada",
+        "O serviço externo de IA recusou a chave de API.",
+        "Confira LLM_API_CHAVE no .env e se a chave tem acesso ao modelo escolhido. O motor local continua disponível.",
+    ),
+    LimiteDoServico: (
+        503, "limite_do_servico",
+        "O serviço externo de IA limitou os pedidos (limite de uso do plano).",
+        "Espere alguns segundos e tente de novo, ou use o motor local.",
+    ),
+    ServicoExternoFalhou: (
+        502, "servico_externo_falhou",
+        "O serviço externo de IA falhou ao responder.",
+        "Tente de novo em instantes ou use o motor local.",
+    ),
 }
+
+# erros em que o motivo exato ajuda quem está usando (vai em "detalhes")
+COM_MOTIVO = (ModeloIndisponivel, MotorNaoConfigurado, RespostaInvalida, ServicoExternoFalhou, TempoEsgotado)
 
 # tradução das mensagens de validação mais comuns do Pydantic
 TRADUCOES = {
@@ -118,9 +153,14 @@ def registrar_tratadores(app: FastAPI):
         status, codigo, mensagem, dica = MAPA_ERROS_MOTOR.get(
             type(exc), (500, "erro_no_modelo", "Falha ao usar o modelo de linguagem.", None)
         )
-        headers = {"Retry-After": "10"} if isinstance(exc, MotorOcupado) else None
+        headers = None
+        if isinstance(exc, MotorOcupado):
+            headers = {"Retry-After": "10"}
+        elif isinstance(exc, LimiteDoServico):
+            headers = {"Retry-After": str(exc.espera or 30)}
+        detalhes = [{"motivo": str(exc)}] if isinstance(exc, COM_MOTIVO) and str(exc) else None
         log.warning("%s %s -> %s (%s)", request.method, request.url.path, status, exc)
-        return resposta_erro(status, codigo, mensagem, dica, headers=headers)
+        return resposta_erro(status, codigo, mensagem, dica, detalhes=detalhes, headers=headers)
 
     @app.exception_handler(RequestValidationError)
     async def erro_de_validacao(request: Request, exc: RequestValidationError):

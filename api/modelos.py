@@ -157,11 +157,151 @@ class StatusModelo(BaseModel):
     erro: Optional[str] = Field(default=None, description="Por que o modelo não carregou (se for o caso)")
 
 
+# ------------------------------------------------------------------ assistente com memória (TP5)
+Estrategia = Literal["janela_notas", "janela", "completa", "sem_memoria"]
+TipoMotor = Literal["local", "api"]
+Assunto = Literal["meta", "prioridade", "obitos_vh", "internacoes_10mil", "esgoto_tratado_pct",
+                  "sem_esgoto_pct", "sem_agua_pct"]
+
+
+class MensagemConversa(BaseModel):
+    """Uma fala da conversa que o painel guarda e reenvia (a API não guarda nada)."""
+    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
+    role: Literal["user", "assistant"] = Field(description="user = pessoa; assistant = resposta anterior do assistente")
+    content: str = Field(min_length=1, max_length=4000)
+
+
+class Notas(BaseModel):
+    """O que o painel anotou da conversa (UFs citadas, assunto, região, ano). Volta atualizado na resposta."""
+    model_config = ConfigDict(extra="forbid")
+    ufs_citadas: list[Sigla] = Field(default_factory=list, max_length=8, description="UFs que a pessoa perguntou, na ordem")
+    ufs_resposta: list[Sigla] = Field(default_factory=list, max_length=5, description="UFs citadas na última resposta")
+    assunto: Optional[Assunto] = None
+    regiao: Optional[Regiao] = None
+    ano: Optional[int] = Field(default=None, ge=2010, le=2024)
+
+
+class PedidoConversa(BaseModel):
+    """Corpo do POST /conversar."""
+    model_config = ConfigDict(
+        extra="forbid",
+        str_strip_whitespace=True,
+        json_schema_extra={"examples": [{
+            "pergunta": "E sem coleta de esgoto?",
+            "historico": [
+                {"role": "user", "content": "Qual a parcela da população sem água no Pará?"},
+                {"role": "assistant", "content": "No Pará (PA), 48,4% da população não tinha acesso à água em 2024."},
+            ],
+            "notas": {"ufs_citadas": ["PA"], "ufs_resposta": ["PA"], "assunto": "sem_agua_pct"},
+            "memoria": "janela_notas",
+            "motor": "local",
+        }]},
+    )
+
+    pergunta: str = Field(min_length=3, max_length=500, description="Pergunta nova (3 a 500 caracteres)")
+    historico: list[MensagemConversa] = Field(
+        default_factory=list, max_length=40,
+        description="Conversa até aqui, na ordem (pergunta, resposta, pergunta, resposta...). Máximo de 40 falas.",
+    )
+    notas: Optional[Notas] = Field(default=None, description="Notas devolvidas na resposta anterior")
+    memoria: Estrategia = Field(
+        default="janela_notas",
+        description="janela_notas = últimas trocas + notas (padrão); janela = só as últimas trocas; "
+                    "completa = conversa inteira; sem_memoria = cada pergunta sozinha",
+    )
+    janela: int = Field(default=2, ge=0, le=10, description="Quantas trocas (pergunta + resposta) vão inteiras")
+    motor: Optional[TipoMotor] = Field(default=None, description="local, api ou vazio (o padrão da API)")
+    mostrar_pedido: bool = Field(default=False, description="Devolve também as mensagens exatas que o modelo leu")
+
+    @field_validator("pergunta")
+    @classmethod
+    def precisa_ter_palavra(cls, valor):
+        if not re.search(r"[A-Za-zÀ-ÿ]{2,}", valor):
+            raise ValueError("a pergunta precisa ter pelo menos uma palavra")
+        return valor
+
+    @model_validator(mode="after")
+    def historico_em_pares(self):
+        for i, mensagem in enumerate(self.historico):
+            esperado = "user" if i % 2 == 0 else "assistant"
+            if mensagem.role != esperado:
+                raise ValueError(f"o histórico precisa alternar pergunta (user) e resposta (assistant); "
+                                 f"a fala {i + 1} deveria ser '{esperado}'")
+        if len(self.historico) % 2:
+            raise ValueError("o histórico terminou numa pergunta sem resposta")
+        return self
+
+
+class InfoMotor(BaseModel):
+    tipo: TipoMotor
+    nome: str
+    onde_roda: str
+
+
+class Conferencia(BaseModel):
+    numeros_citados: int = Field(description="Números acima de 10 que aparecem na resposta")
+    sem_origem: list[str] = Field(description="Números da resposta que não estão nos dados enviados ao modelo")
+
+
+class RespostaConversa(BaseModel):
+    """Resposta do POST /conversar."""
+    resposta: str = Field(min_length=2, max_length=2000)
+    memoria: Estrategia
+    motor: InfoMotor
+    notas: Notas = Field(description="Notas atualizadas: o painel guarda e manda de volta na próxima pergunta")
+    tokens_entrada: int = Field(ge=0, description="Tamanho do pedido que o modelo leu (instruções + fatos + conversa)")
+    tokens_saida: int = Field(ge=0)
+    segundos: float
+    mensagens_enviadas: int = Field(ge=0, description="Falas antigas da conversa que foram junto com a pergunta")
+    fatos_usados: list[str] = Field(description="Blocos de fatos escolhidos para esta pergunta")
+    conferencia: Conferencia
+    respondido_em: datetime
+    aviso: Optional[str] = None
+    pedido: Optional[list[dict]] = Field(default=None, description="Mensagens exatas enviadas ao modelo (se pedido)")
+
+
+class StatusMotor(BaseModel):
+    tipo: TipoMotor
+    disponivel: bool
+    nome: str
+    onde_roda: Optional[str] = None
+    motivo: Optional[str] = Field(default=None, description="Por que não está disponível")
+
+
+class ListaMotores(BaseModel):
+    padrao: Optional[TipoMotor] = Field(description="Motor usado quando o pedido não escolhe")
+    motores: list[StatusMotor]
+    estrategias: dict[Estrategia, str]
+
+
+class PosicaoPrioridade(BaseModel):
+    posicao: int
+    sigla: Sigla
+    uf_nome: str
+    regiao: Regiao
+    indice: float = Field(ge=0, le=100)
+    comp_cobertura: float = Field(ge=0, le=100)
+    comp_ritmo: float = Field(ge=0, le=100)
+    comp_saude: float = Field(ge=0, le=100)
+    meta_agua_ano: Optional[int] = None
+    meta_agua_situacao: str
+    meta_esgoto_ano: Optional[int] = None
+    meta_esgoto_situacao: str
+    motivos: list[str]
+
+
+class Prioridades(BaseModel):
+    pesos: dict[str, float]
+    descricao: dict[str, str]
+    ranking: list[PosicaoPrioridade]
+
+
 # ------------------------------------------------------------------ rotas de dados (vieram do TP3)
 class Raiz(BaseModel):
     mensagem: str
     documentacao: str
     modelo_carregado: bool
+    motores_disponiveis: list[TipoMotor] = Field(default_factory=list)
     rotas: list[str]
 
 

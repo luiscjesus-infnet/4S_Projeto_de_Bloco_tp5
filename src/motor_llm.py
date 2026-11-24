@@ -1,10 +1,12 @@
 """
 Motor de linguagem do projeto: carrega um modelo local do HuggingFace (Transformers)
-e faz as três análises que a API oferece.
+e faz as três análises que a API oferece, mais a conversa do assistente (TP5).
 
 - tema: em qual assunto de saneamento o texto se encaixa (lista fechada)
 - sentimento: tom do texto (positivo, negativo ou neutro)
 - resumo: até 3 frases com o principal do texto
+- responder: recebe as mensagens de uma conversa (sistema, usuário, assistente) e
+  escreve a próxima resposta; quem monta essas mensagens é src/assistente.py
 
 Para tema e sentimento eu não deixo o modelo escrever livremente. Monto o pedido,
 rodo o modelo uma vez e olho só a probabilidade da primeira "palavra" de cada
@@ -61,6 +63,8 @@ MAX_TOKENS_ENTRADA = int(os.environ.get("LLM_MAX_TOKENS_ENTRADA", 1024))
 MAX_TOKENS_RESUMO = int(os.environ.get("LLM_MAX_TOKENS_RESUMO", 160))
 TEMPO_LIMITE = float(os.environ.get("LLM_TEMPO_LIMITE", 90))      # segundos por pedido
 ESPERA_NA_FILA = float(os.environ.get("LLM_ESPERA_FILA", 5))      # segundos esperando o modelo ficar livre
+MAX_TOKENS_CONVERSA = int(os.environ.get("LLM_MAX_TOKENS_CONVERSA", 4096))  # pedido inteiro da conversa
+MAX_TOKENS_RESPOSTA = int(os.environ.get("LLM_MAX_TOKENS_RESPOSTA", 130))   # resposta do assistente (~3 frases)
 
 
 # ----------------------------------------------------------------------------------
@@ -92,6 +96,27 @@ class SemMemoria(ErroDoMotor):
 
 class RespostaInvalida(ErroDoMotor):
     """O modelo devolveu algo fora do formato esperado."""
+
+
+# erros que só acontecem quando o modelo é chamado por um serviço externo (src/motor_api.py)
+class MotorNaoConfigurado(ErroDoMotor):
+    """Falta a chave ou o nome do modelo no .env."""
+
+
+class ChaveRecusada(ErroDoMotor):
+    """O serviço respondeu 401/403: chave errada, vencida ou sem permissão para o modelo."""
+
+
+class LimiteDoServico(ErroDoMotor):
+    """O serviço respondeu 429: passou do limite de pedidos (comum nos modelos gratuitos)."""
+
+    def __init__(self, mensagem, espera=None):
+        super().__init__(mensagem)
+        self.espera = espera
+
+
+class ServicoExternoFalhou(ErroDoMotor):
+    """O serviço caiu, não respondeu ou devolveu erro do lado dele (5xx, modelo inexistente)."""
 
 
 def pasta_do_modelo(nome):
@@ -277,12 +302,47 @@ class MotorLLM:
             return self._resumir(texto)
         return self._classificar(tarefa, texto, com_definicoes)
 
-    # ------------------------------------------------------------------ porta de entrada
+    def contar_tokens(self, mensagens):
+        prompt = self.tokenizer.apply_chat_template(mensagens, add_generation_prompt=True, tokenize=False)
+        return len(self.tokenizer.encode(prompt, add_special_tokens=False))
+
+    def _gerar_resposta(self, mensagens, max_novos):
+        """Conversa: o modelo lê as mensagens (sistema + conversa + pergunta) e escreve a próxima."""
+        import torch
+
+        prompt = self.tokenizer.apply_chat_template(mensagens, add_generation_prompt=True, tokenize=False)
+        entrada = self.tokenizer(prompt, return_tensors="pt").to(self.dispositivo)
+        tokens_entrada = int(entrada["input_ids"].shape[1])
+        with torch.inference_mode():
+            saida = self.modelo.generate(
+                **entrada,
+                max_new_tokens=max_novos,
+                do_sample=False,                # mesma pergunta, mesma resposta (dá para repetir o teste)
+                repetition_penalty=1.05,
+                max_time=TEMPO_LIMITE,
+                pad_token_id=self.tokenizer.eos_token_id,
+            )
+        novos = saida[0, tokens_entrada:]
+        texto = self.tokenizer.decode(novos, skip_special_tokens=True).strip()
+        if len(texto) < 2:
+            raise RespostaInvalida("O modelo devolveu uma resposta vazia.")
+        return {"texto": texto, "tokens_entrada": tokens_entrada, "tokens_saida": int(novos.shape[0]),
+                "cortada": int(novos.shape[0]) >= max_novos}
+
+    # ------------------------------------------------------------------ portas de entrada
     def processar(self, tarefa, texto, com_definicoes=True):
+        """Tema, sentimento ou resumo de um texto (rota POST /processar_texto)."""
+        return self._com_limites(self._executar, tarefa, texto, com_definicoes)
+
+    def responder(self, mensagens, max_novos=MAX_TOKENS_RESPOSTA):
+        """Próxima resposta de uma conversa (rota POST /conversar). Mesma fila e mesmo tempo limite."""
+        return self._com_limites(self._gerar_resposta, mensagens, max_novos)
+
+    def _com_limites(self, funcao, *argumentos):
         """
-        Roda a análise respeitando dois limites:
+        Roda a tarefa respeitando dois limites:
         - fila: se outro pedido estiver usando o modelo por mais de ESPERA_NA_FILA s -> MotorOcupado
-        - tempo: se a análise passar de TEMPO_LIMITE s -> TempoEsgotado
+        - tempo: se a tarefa passar de TEMPO_LIMITE s -> TempoEsgotado
         """
         import torch
 
@@ -291,7 +351,7 @@ class MotorLLM:
         futuro = None
         try:
             inicio = time.perf_counter()
-            futuro = self._executor.submit(self._executar, tarefa, texto, com_definicoes)
+            futuro = self._executor.submit(funcao, *argumentos)
             resultado = futuro.result(timeout=TEMPO_LIMITE)
             resultado["segundos"] = round(time.perf_counter() - inicio, 2)
             return resultado
@@ -320,3 +380,9 @@ class MotorLLM:
             "parametros_milhoes": round(self.parametros / 1e6),
             "segundos_carregando": self.segundos_carregando,
         }
+
+    # identificação usada pelo assistente (mesmo formato do motor via API)
+    tipo = "local"
+
+    def descricao(self):
+        return {"tipo": "local", "nome": self.nome, "onde_roda": f"nesta máquina ({self.dispositivo}, {self.precisao})"}

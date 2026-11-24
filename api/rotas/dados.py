@@ -17,12 +17,14 @@ from api.modelos import (
     ListaSaneamento,
     NovaObservacao,
     ObservacaoCriada,
+    Prioridades,
     Ranking,
     Regiao,
     Serie,
     Sigla,
 )
-from src import dados
+from src import analise, dados
+from src.fatos import BaseDeFatos
 
 roteador = APIRouter()
 
@@ -64,6 +66,35 @@ def ranking_prioridade(
             for i, l in enumerate(dados.ranking(linhas, indicador, limite))
         ],
     }
+
+
+@roteador.get("/prioridades", response_model=Prioridades, tags=["Saneamento"],
+              summary="Índice de prioridade para investimento", responses=respostas_de_erro(422))
+def prioridades(
+    peso_cobertura: float = Query(default=1, ge=0, le=10, description="Peso da cobertura atual (sem água e sem esgoto)"),
+    peso_ritmo: float = Query(default=1, ge=0, le=10, description="Peso do ritmo até a meta de 2033"),
+    peso_saude: float = Query(default=1, ge=0, le=10, description="Peso das internações por doenças de veiculação hídrica"),
+    limite: int = Query(default=27, ge=1, le=27),
+):
+    """
+    Responde à pergunta do projeto: ordena as UFs pela prioridade de investimento em água e esgoto.
+    O índice (0 a 100) junta cobertura atual, ritmo até a meta do Marco Legal do Saneamento (2033)
+    e saúde. Os pesos são relativos (1, 1, 1 = pesos iguais). Tudo calculado no Python, sem modelo.
+    """
+    if peso_cobertura + peso_ritmo + peso_saude == 0:
+        raise HTTPException(status_code=422, detail="Pelo menos um dos pesos precisa ser maior que zero.")
+    pesos = {"cobertura": peso_cobertura, "ritmo": peso_ritmo, "saude": peso_saude}
+    base = BaseDeFatos()
+    ranking = analise.indice_prioridade(base.perfis, pesos)
+    linhas = []
+    for l in ranking[:limite]:
+        p = base.perfis[l["sigla"]]
+        linhas.append({**l, "meta_agua_ano": p["meta_agua_ano"], "meta_agua_situacao": p["meta_agua_situacao"],
+                       "meta_esgoto_ano": p["meta_esgoto_ano"], "meta_esgoto_situacao": p["meta_esgoto_situacao"],
+                       "motivos": base.motivos(l["sigla"])})
+    soma = sum(pesos.values())
+    return {"pesos": {k: round(v / soma, 3) for k, v in pesos.items()}, "descricao": analise.COMPONENTES,
+            "ranking": linhas}
 
 
 @roteador.get("/saneamento/{sigla}", response_model=LinhaSaneamento, tags=["Saneamento"],

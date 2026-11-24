@@ -21,17 +21,19 @@ preservar_filtros()
 paginas = {
     "Painel": [
         st.Page("paginas/inicio.py", title="Início", icon="🏠", default=True),
+        st.Page("paginas/prioridades.py", title="Prioridades de investimento", icon="🎯"),
         st.Page("paginas/panorama.py", title="Panorama por UF", icon="📊"),
         st.Page("paginas/evolucao.py", title="Evolução 2010-2024", icon="📈"),
-        st.Page("paginas/noticias.py", title="Notícias e termos", icon="📰"),
+        st.Page("paginas/noticias.py", title="Notícias", icon="📰"),
+    ],
+    "Inteligência artificial": [
+        st.Page("paginas/assistente.py", title="Assistente do painel", icon="💬"),
+        st.Page("paginas/analise_ia.py", title="Análise de texto com IA", icon="🧠"),
+        st.Page("paginas/como_funciona_ia.py", title="Como a IA funciona", icon="🔍"),
     ],
     "Dados": [
         st.Page("paginas/api_projeto.py", title="API do projeto", icon="🔌"),
         st.Page("paginas/arquivos.py", title="Enviar e baixar arquivos", icon="📂"),
-    ],
-    "Inteligência artificial": [
-        st.Page("paginas/analise_ia.py", title="Análise de texto com IA", icon="🧠"),
-        st.Page("paginas/preparacao_ia.py", title="Dados preparados para IA", icon="🤖"),
     ],
 }
 
@@ -46,6 +48,6 @@ with st.sidebar:
     atualizacao = [f["atualizado_em"] for f in info_fontes() if f["tecnica"] == "Selenium"]
     if atualizacao and atualizacao[0]:
         st.caption(f"Última coleta da série histórica: {atualizacao[0]}.")
-    st.caption("Projeto de Bloco - INFNET - TP4")
+    st.caption("Projeto de Bloco - INFNET - TP5")
 
 pg.run()

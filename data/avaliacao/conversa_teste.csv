@@ -1,0 +1,11 @@
+ordem,pergunta,depende_de,esperado,nao_pode,gabarito
+1,"Qual a parcela da população sem água no Pará?","-","48[.,]4","","48,4% (PA, 2024)"
+2,"E sem coleta de esgoto?","pergunta 1 (Pará)","90([.,]0)? ?%","","90,0% (PA, 2024)"
+3,"Em 2010 esse número era maior ou menor?","perguntas 1 e 2 (Pará + esgoto)","97[.,]9","","maior: 97,9% em 2010"
+4,"No ritmo atual, ele chega à meta de esgoto de 2033?","pergunta 1 (Pará)","n[ãa]o (chega|vai|alcan|ating|cumpr)|mais de 100|n[ãa]o conseg","","não chega (mais de 100 anos)"
+5,"Agora o Maranhão: quantas internações por doenças de veiculação hídrica a cada 10 mil habitantes?","-","48[.,]6","","48,6 (MA, 2024)"
+6,"E em 2010, quantas eram?","pergunta 5 (Maranhão + internações)","86[.,]6","","86,6 (MA, 2010)"
+7,"Qual região tem a pior média de coleta de esgoto?","-","\bnorte\b","","Norte (77,6% sem esgoto)"
+8,"Quais as três UFs com maior prioridade de investimento?","-","maranh;acre;par[áa]\b","","Maranhão, Acre e Pará"
+9,"Voltando ao primeiro estado que eu perguntei: quantas pessoas estão sem água lá?","pergunta 1 (Pará)","\(pa\)|\b(no|do|em|o) par[áa]\b;4[.,]2 milh|4[.,]216","","4,2 milhões de pessoas (PA)"
+10,"E a meta de água de 2033, ele cumpre?","pergunta 9 (Pará)","2096","","não: só em 2096"

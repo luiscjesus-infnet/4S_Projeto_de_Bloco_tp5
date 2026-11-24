@@ -1,0 +1,7 @@
+rodada,motor,acertos,perguntas,acertos_que_dependem_de_memoria,perguntas_que_dependem_de_memoria,tokens_entrada_media,tokens_entrada_primeira,tokens_entrada_ultima,segundos_total,segundos_resumindo,numeros_sem_origem
+sem memória,Qwen/Qwen2.5-1.5B-Instruct,4,10,0,6,669,907,597,103.6,0.0,0
+conversa inteira,Qwen/Qwen2.5-1.5B-Instruct,7,10,4,6,1114,907,1327,112.9,0.0,0
+janela de 2 trocas,Qwen/Qwen2.5-1.5B-Instruct,6,10,3,6,899,907,693,105.0,0.0,0
+janela + resumo,Qwen/Qwen2.5-1.5B-Instruct,8,10,4,6,1061,907,1111,229.9,107.4,0
+janela + notas,Qwen/Qwen2.5-1.5B-Instruct,8,10,4,6,1067,907,1094,121.2,0.0,0
+"janela + notas, tabela crua",Qwen/Qwen2.5-1.5B-Instruct,0,10,0,6,1764,1699,1810,159.9,0.0,1

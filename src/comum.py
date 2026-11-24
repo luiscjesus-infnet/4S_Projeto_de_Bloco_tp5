@@ -65,6 +65,27 @@ def obter_noticias():
     return dados.carregar_noticias()
 
 
+@st.cache_resource(ttl=3600)
+def obter_base_fatos():
+    """Perfis das UFs, tendência, metas e índice de prioridade (src/analise.py e src/fatos.py)."""
+    from src.fatos import BaseDeFatos
+
+    return BaseDeFatos()
+
+
+def texto_meta(ano, situacao):
+    """Situação da meta de 2033 numa expressão curta para tabela."""
+    if situacao == "cumpre":
+        return "já cumpre"
+    if situacao == "nao_chega":
+        return "não chega no ritmo atual"
+    if situacao == "no_prazo":
+        return f"{ano} (no prazo)"
+    if situacao == "atrasada":
+        return f"{ano} (+{ano - 2033} anos)"
+    return "-"
+
+
 def fmt(valor, casas=1, sufixo=""):
     if valor is None:
         return "-"
